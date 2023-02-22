@@ -4,6 +4,7 @@ console.log(typeof input.min)
 
 const textOutput = document.querySelector('#text');
 
+textOutput.style.fontSize = input.min;
 
 input.addEventListener('input', () => {
 
