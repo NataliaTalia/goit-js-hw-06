@@ -9,26 +9,29 @@ const removeButton = document.querySelector('[data-destroy]');
 
 const input = document.querySelector('#controls > input');
 
-let boxSize = 30;
 
-let boxColor = getRandomHexColor();
+
+
+
 
 function  createBoxes(amount) {
+  const elements =[];
+  let boxSize = 30;
+  for(let i = 0; i < amount; i+= 1) {
 
-  for(let i = 0; i <= amount; i+= 1) {
-
+    
     const box = document.createElement("div");
    
-    box.style.height = "30px";
-    box.style.width = "30px";
-    box.style.backgroundColor = boxColor;
+    box.style.height = `${boxSize}px`;
+    box.style.width = `${boxSize}px`;
+    box.style.backgroundColor = getRandomHexColor();
 
-    mainBox.appendChild(box);
+   elements.push(box);
 
     boxSize += 10;
-    boxColor = getRandomHexColor();
+    
   }
-
+  mainBox.append(...elements);
 }
 
 function destroyBoxes () {

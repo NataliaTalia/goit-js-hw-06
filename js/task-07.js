@@ -4,10 +4,10 @@ console.log(typeof input.min)
 
 const textOutput = document.querySelector('#text');
 
-textOutput.style.fontSize = input.min;
+textOutput.style.fontSize = input.value + 'px';
 
 input.addEventListener('input', () => {
 
-   let size = input.value;
-   textOutput.style.fontSize = size + 'px';
+   
+   textOutput.style.fontSize = input.value + 'px';
 })
